@@ -2,6 +2,7 @@ package com.Bancodasquestoes.questoes_api.entity;
 
 import java.util.ArrayList;
 
+import com.Bancodasquestoes.questoes_api.dto.QuestaoDTO;
 import com.Bancodasquestoes.questoes_api.enums.AlternativaLetra;
 import com.Bancodasquestoes.questoes_api.enums.Dificuldade;
 
@@ -62,4 +63,21 @@ public class Questao {
 
 	@ElementCollection
 	private ArrayList<String> imagens;
+	
+	public Questao(QuestaoDTO dados, Disciplina disciplina, Banca banca, ArrayList<SubDisciplina> subdisciplinas) {
+		this.AlternativaA = dados.alternativaA();
+		this.AlternativaB = dados.alternativaB();
+		this.AlternativaC = dados.alternativaC();
+		this.AlternativaD = dados.alternativaD();
+		this.AlternativaE = dados.alternativaE();
+		this.alternativaCorreta = dados.alternativaCorreta();
+		this.alternativaSaoImagem = dados.alternativasSaoImagem();
+		this.imagens = dados.imagens();
+		this.banca = banca;
+		this.bibliografia = dados.bibliografia();
+		this.dificuldade = dados.dificuldade();
+		this.disciplina = disciplina;
+		this.subdisciplinas = subdisciplinas;
+		this.texto = dados.texto();
+	}
 }
