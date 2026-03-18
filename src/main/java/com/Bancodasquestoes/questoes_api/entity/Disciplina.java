@@ -1,5 +1,7 @@
 package com.Bancodasquestoes.questoes_api.entity;
 
+import com.Bancodasquestoes.questoes_api.dto.DisciplinaDTO;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,4 +27,8 @@ public class Disciplina {
 private Long id;
 
 private String nome;
+
+public Disciplina(DisciplinaDTO dados) {
+	this.nome = dados.nome();
+}
 }

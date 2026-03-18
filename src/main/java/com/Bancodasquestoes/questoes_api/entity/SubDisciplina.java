@@ -1,5 +1,8 @@
 package com.Bancodasquestoes.questoes_api.entity;
 
+import com.Bancodasquestoes.questoes_api.dto.DisciplinaDTO;
+import com.Bancodasquestoes.questoes_api.dto.SubDisciplinaDTO;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -29,4 +32,8 @@ private String nome;
 
 @ManyToOne
 private Disciplina disciplina;
+
+public SubDisciplina(SubDisciplinaDTO dados) {
+	this.nome = dados.nome();
+}
 }

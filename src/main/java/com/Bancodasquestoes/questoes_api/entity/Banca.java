@@ -1,5 +1,7 @@
 package com.Bancodasquestoes.questoes_api.entity;
 
+import com.Bancodasquestoes.questoes_api.dto.BancaDTO;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -25,6 +27,10 @@ public class Banca {
 private Long id;
 
 private String nome;
+
+public Banca(BancaDTO dados) {
+this.nome = dados.nome();
+}
 }
 
 
