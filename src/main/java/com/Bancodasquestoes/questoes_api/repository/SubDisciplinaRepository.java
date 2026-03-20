@@ -1,5 +1,9 @@
 package com.Bancodasquestoes.questoes_api.repository;
 
-public class SubDisciplinaRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.Bancodasquestoes.questoes_api.entity.SubDisciplina;
+
+public interface SubdisciplinaRepository extends JpaRepository<SubDisciplina,Long>{
 
 }
