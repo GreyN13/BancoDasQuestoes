@@ -15,8 +15,6 @@ import lombok.Setter;
 
 @Table(name="disciplina")
 @Entity(name="disciplinas")
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(of="id")
@@ -31,4 +29,18 @@ private String nome;
 public Disciplina(DisciplinaDTO dados) {
 	this.nome = dados.nome();
 }
+
+public String getNome() {
+	return nome;
+}
+
+public void setNome(String nome) {
+	this.nome = nome;
+}
+
+public Long getId() {
+	return id;
+}
+
+
 }

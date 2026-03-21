@@ -23,11 +23,7 @@ public class QuestaoController {
     private QuestaoService questaoService;
 
     @GetMapping("/sortear")
-    public QuestaoDTO sortear(
-        @RequestParam Long disciplinaId,
-        @RequestParam(required = false) Long subdisciplinaId,
-        @RequestParam(required = false) Dificuldade dificuldade
-    ) {
+    public QuestaoDTO sortear(@RequestParam Long disciplinaId, Long subdisciplinaId, Dificuldade dificuldade) {
         return questaoService.sortear(disciplinaId, subdisciplinaId, dificuldade);
     }
     

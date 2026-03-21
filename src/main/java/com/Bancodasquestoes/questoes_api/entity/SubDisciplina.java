@@ -17,8 +17,6 @@ import lombok.Setter;
 
 @Table(name="subdisciplina")
 @Entity(name="subdisciplinas")
-@Getter
-@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(of="id")
@@ -36,4 +34,26 @@ private Disciplina disciplina;
 public SubDisciplina(SubDisciplinaDTO dados) {
 	this.nome = dados.nome();
 }
+
+public String getNome() {
+	return nome;
+}
+
+public void setNome(String nome) {
+	this.nome = nome;
+}
+
+public Disciplina getDisciplina() {
+	return disciplina;
+}
+
+public void setDisciplina(Disciplina disciplina) {
+	this.disciplina = disciplina;
+}
+
+public Long getId() {
+	return id;
+}
+
+
 }

@@ -31,9 +31,6 @@ public class QuestaoService {
 	public QuestaoDTO sortear(Long disciplinaId, Long subdisciplinaId, Dificuldade dificuldade) {
 	    return questaorepo.sortearPorDisciplina(disciplinaId, subdisciplinaId, dificuldade);
 	}
-	
-	
-	
 
 	public void criar(QuestaoDTO dto) {
 	    Disciplina disciplina = disciplinaRepo.findById(dto.disciplinaId()).orElseThrow();
