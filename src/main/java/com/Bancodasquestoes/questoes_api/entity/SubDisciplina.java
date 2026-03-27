@@ -1,6 +1,5 @@
 package com.Bancodasquestoes.questoes_api.entity;
 
-import com.Bancodasquestoes.questoes_api.dto.DisciplinaDTO;
 import com.Bancodasquestoes.questoes_api.dto.SubDisciplinaDTO;
 
 import jakarta.persistence.Entity;
@@ -11,9 +10,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.EqualsAndHashCode;
-import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Table(name="subdisciplina")
 @Entity(name="subdisciplinas")
@@ -25,14 +22,14 @@ public class SubDisciplina {
 @Id
 @GeneratedValue(strategy=GenerationType.IDENTITY)
 private Long id;
-
 private String nome;
 
 @ManyToOne
 private Disciplina disciplina;
 
-public SubDisciplina(SubDisciplinaDTO dados) {
+public SubDisciplina(SubDisciplinaDTO dados, Disciplina disciplina) {
 	this.nome = dados.nome();
+	this.disciplina = disciplina;
 }
 
 public String getNome() {

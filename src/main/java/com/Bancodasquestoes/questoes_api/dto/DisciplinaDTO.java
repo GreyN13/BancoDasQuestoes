@@ -8,6 +8,6 @@ public record DisciplinaDTO(
 	
 	public DisciplinaDTO(Disciplina disciplina) {
 		this(disciplina.getId(),
-				disciplina.getNome());
+			 disciplina.getNome());
 	}
 }
